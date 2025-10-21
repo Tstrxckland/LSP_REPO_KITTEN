@@ -1,0 +1,41 @@
+Midterm Essay — Large Scale Programming (Fall 2025)
+Name: Tykyrah Strickland
+Course: Large Scale Programming
+Instructor: Prof. Woolfolk
+Date: October 20, 2025
+Question 1 — Cohesion and Refactoring of StudentPortalHelper
+The given StudentPortalHelper class performs many unrelated tasks such as GPA computation, CSV file export, email creation, date formatting, tuition payment, password validation, and caching. According to Arthur Riel’s heuristics and the Single Responsibility Principle (SRP), a class should have one reason to change and should encapsulate a single, well-defined purpose. When a single class handles logic that belongs to multiple domains—academic computation, I/O operations, security, and user-interface formatting—it becomes a low-cohesion 'god class.'
+
+A well-designed class should always aim for high cohesion, where all of its attributes and methods contribute to a single goal. High cohesion improves readability, reduces coupling, simplifies testing, and limits side effects when making modifications.
+
+To improve the structure, I would refactor StudentPortalHelper into smaller, focused classes that each serve one responsibility. For example:
+- GpaCalculator — handles grade averaging and GPA computation.
+- RosterCsvExporter — manages file I/O and exporting.
+- EmailTemplateBuilder — formats email text.
+- PaymentProcessor — performs or simulates tuition transactions.
+- PasswordPolicy — validates password strength.
+- CacheManager — manages temporary storage or retrieval.
+
+By decomposing the helper class into these distinct classes, each unit becomes easier to test and maintain. This approach follows both encapsulation and modularity principles, ensuring that future changes in one feature (e.g., password rules) do not affect unrelated features (like GPA calculations).
+Question 3 — Car Trim and Engine Design Refactor
+The current UML structure represents trim levels (Base, Luxury, Sport) and engine types (Electric, Petrol) as subclasses of Car. This design fails to support dynamic trim changes because inheritance fixes a car’s type at creation time. In Java, an object’s class cannot be changed once instantiated. Thus, the current structure violates flexibility and reusability by coupling behavior to rigid inheritance.
+
+To allow a car’s trim to change at runtime, I would refactor the design using composition and the Strategy pattern. Instead of extending Car for each trim, Car would contain a Trim object and an Engine object:
+
+class Car {
+    private Trim trim;
+    private Engine engine;
+
+    public void setTrim(Trim newTrim) { this.trim = newTrim; }
+    public void setEngine(Engine newEngine) { this.engine = newEngine; }
+}
+
+Trim and Engine would each be interfaces implemented by specific variants such as BaseTrim, SportsTrim, LuxuryTrim, ElectricEngine, and PetrolEngine. Using this composition-based approach, a Car can switch trims or engines at runtime simply by replacing the current strategy object. This design not only allows dynamic customization but also supports open/closed design principles: new trims or engines can be added without modifying the existing Car class.
+Question 5 — Reflection on AI Usage
+Throughout this midterm, I used ChatGPT as a study and organizational tool. It helped me interpret instructions, clarify what should be placed in each folder, and confirm that my package declarations and structure followed Java conventions. ChatGPT also explained object-oriented design ideas such as cohesion, abstraction, and composition in clear language that made it easier for me to reason through the essay and coding sections.
+
+However, I still wrote and verified all code myself. I ran the programs in Visual Studio Code and reviewed the console outputs to ensure they matched the requirements exactly. While AI can accelerate learning and planning, it should never replace human understanding or independent verification. Going forward, I will continue to use AI as a supportive tool for brainstorming and debugging explanations while maintaining academic honesty and full authorship over my submissions.
+References
+- ChatGPT (OpenAI, 2025) — Used to clarify assignment structure, package organization, and object-oriented design principles.
+- Java SE 17 API Documentation — For method syntax, exception handling, and standard library references (Math, IllegalArgumentException).
+- Riel, A. J. (1996). Object-Oriented Design Heuristics. Addison-Wesley.

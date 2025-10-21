@@ -1,0 +1,36 @@
+AI & Internet Usage (Essay Portion — Questions 1, 3, and 5)
+
+Question 1 – Cohesion and Refactoring of StudentPortalHelper
+Prompt used:
+“Can you explain how to identify and refactor a class that violates cohesion and the Single Responsibility Principle, such as one performing GPA calculation, file exporting, and password validation, and show how to separate its responsibilities into smaller focused classes?”
+
+AI Assistance Provided:
+ChatGPT helped clarify what low cohesion and a ‘god class’ are, and how to apply the Single Responsibility Principle. It provided examples of focused helper classes and guided how to phrase the refactoring explanation clearly. I wrote the final answer in my own words, referencing examples from my coursework.
+
+---
+
+Question 3 – Car Trim and Engine Design Refactor
+Prompt used:
+“Can you explain how to redesign a Car class that currently uses inheritance for trims and engines, so that it supports dynamic trim changes at runtime using composition or the Strategy pattern?”
+
+AI Assistance Provided:
+ChatGPT helped me review the design limitations of inheritance in the provided UML, and explained how composition and interfaces can allow for runtime flexibility. I used that conceptual outline to write my own response, describing Trim and Engine interfaces and demonstrating how setTrim() and setEngine() methods enable change.
+
+---
+
+Question 5 – Reflection on AI Usage
+Prompt used:
+“Can you generate an outline to help me formulate an essay based on the information that I have gathered through the requirements of the exam, rubric, and my own hands-on exposure to object-oriented programming?”
+
+AI Assistance Provided:
+ChatGPT helped me create an outline to organize my thoughts and structure my reflection paragraph logically. I drafted the final reflection independently, describing how I applied AI guidance responsibly while completing all work myself.
+
+---
+
+Other References:
+- Java SE 17 API Documentation — consulted for syntax, exception handling, and Math class details.  
+- Riel, A. J. (1996). *Object-Oriented Design Heuristics.* Addison-Wesley.
+
+Declaration:
+I, Tykyrah Strickland, confirm that ChatGPT was used only for conceptual and structural guidance.  
+All final writing and code were authored, tested, and verified independently by me.

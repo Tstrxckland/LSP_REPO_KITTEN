@@ -1,0 +1,16 @@
+AI & Internet Usage (for Question 4)
+
+Prompt used:
+“I’m working on the polymorphism and interface question for my midterm. Can you help me understand how to properly set up the relationships between the abstract class `Device`, the interfaces (`Networked` and `BatteryPowered`), and subclasses like `DoorLock`, `Thermostat`, and `Camera`? I want to make sure I’m using inheritance and implementation correctly.”
+
+AI Assistance Provided:
+ChatGPT guided me conceptually through how abstract classes and interfaces work together in Java. It helped me understand how to implement shared methods, connect subclasses through inheritance, and use interfaces to represent different capabilities (network connectivity and battery power). 
+
+I applied that understanding to build, debug, and verify my own code structure in VS Code, ensuring that all methods and packages compiled successfully.
+
+Other References:
+- Java SE 17 API Documentation — consulted for `System.currentTimeMillis()` and interface method syntax.
+
+Declaration:
+I, Tykyrah Strickland, confirm that ChatGPT was used for conceptual understanding, debugging clarification, and syntax review. 
+All final code was created, tested, and verified by me.

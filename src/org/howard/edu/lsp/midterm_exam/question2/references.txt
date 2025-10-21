@@ -1,0 +1,16 @@
+AI & Internet Usage (for Question 2)
+
+Prompt used:
+“I’m working on Question 2 for my midterm in VS Code, and I need help understanding how to correctly use method overloading in Java to calculate the area of different shapes. Can you explain how to handle validation and structure my methods so that the program runs without errors?”
+
+AI Assistance Provided:
+ChatGPT helped clarify how method overloading works in Java, when to use static methods, and how to apply input validation with exceptions. It also explained how to organize my files and verify my output through the terminal in VS Code. 
+
+I used these explanations to guide my own implementation of the `AreaCalculator` and `Main` classes, ensuring that my code met the midterm requirements and compiled successfully.
+
+Other References:
+- Java SE 17 API Documentation — reviewed for syntax and exception handling examples.
+
+Declaration:
+I, Tykyrah Strickland, confirm that ChatGPT was used only for conceptual clarification and troubleshooting support. 
+All code was written, tested, and finalized by me.
